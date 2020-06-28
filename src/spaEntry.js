@@ -2,7 +2,7 @@ import singleSpaSvelte from "single-spa-svelte";
 import myRootSvelteComponent from "./main";
 const svelteLifecycles = singleSpaSvelte({
   component: myRootSvelteComponent,
-  domElementGetter: () => document.getElementById("svelte-app"),
+  domElementGetter: () => document.getElementById("layout-app"),
   props: { someData: "data" },
 });
 export const bootstrap = svelteLifecycles.bootstrap;
