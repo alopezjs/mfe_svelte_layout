@@ -15,7 +15,12 @@ module.exports = {
       {
         test: /\.(htmlx?|svelte)$/,
         exclude: [path.resolve(__dirname, "node_modules")],
-        loader: ["svelte-loader"],
+        use: {
+          loader: "svelte-loader",
+          options: {
+            hotReload: true,
+          },
+        },
       },
       {
         test: /\.html$/i,

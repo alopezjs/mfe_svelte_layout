@@ -10825,9 +10825,9 @@ module.exports = /*#__PURE__*/function (_BaseClient) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8082":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8081":
 /*!*********************************************************!*\
-  !*** (webpack)-dev-server/client?http://localhost:8082 ***!
+  !*** (webpack)-dev-server/client?http://localhost:8081 ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -11009,7 +11009,7 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
-/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8082"))
+/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8081"))
 
 /***/ }),
 
@@ -11810,7 +11810,9 @@ function create_fragment(ctx) {
 }
 
 function logout() {
-	
+	sessionStorage.removeItem("user");
+	sessionStorage.removeItem("token");
+	location.href = "/";
 }
 
 class App extends svelte_internal__WEBPACK_IMPORTED_MODULE_0__["SvelteComponent"] {
@@ -11821,7 +11823,11 @@ class App extends svelte_internal__WEBPACK_IMPORTED_MODULE_0__["SvelteComponent"
 	}
 }
 
+
+if (false) {}
+
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
 
 /***/ }),
 
@@ -11852,9 +11858,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const app = new _App_svelte__WEBPACK_IMPORTED_MODULE_0__["default"]({
   target: document.querySelector("#layout-app"),
-  props: {
-    name: "world",
-  },
+  props: {},
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (app);
@@ -11879,26 +11883,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main */ "./src/main.js");
 
 
+
 const svelteLifecycles = single_spa_svelte__WEBPACK_IMPORTED_MODULE_0___default()({
   component: _main__WEBPACK_IMPORTED_MODULE_1__["default"],
   domElementGetter: () => document.getElementById("layout-app"),
-  props: { someData: "data" },
+  props: {},
 });
-const bootstrap = svelteLifecycles.bootstrap;
-const mount = svelteLifecycles.mount;
-const unmount = svelteLifecycles.unmount;
+
+const bootstrap = [svelteLifecycles.bootstrap];
+const mount = [svelteLifecycles.mount];
+const unmount = [svelteLifecycles.unmount];
 
 
 /***/ }),
 
 /***/ 0:
 /*!*******************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://localhost:8082 src/spaEntry.js ***!
+  !*** multi (webpack)-dev-server/client?http://localhost:8081 src/spaEntry.js ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alopez/dev2/mfes/LL/mfe_svelte_layout/node_modules/webpack-dev-server/client/index.js?http://localhost:8082 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8082");
+__webpack_require__(/*! /Users/alopez/dev2/mfes/LL/mfe_svelte_layout/node_modules/webpack-dev-server/client/index.js?http://localhost:8081 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8081");
 module.exports = __webpack_require__(/*! src/spaEntry.js */"./src/spaEntry.js");
 
 

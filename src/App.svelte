@@ -1,7 +1,11 @@
 <script>
   import svelteLogo from "./logoSvelte.png";
 
-  function logout() {}
+  function logout() {
+    sessionStorage.removeItem("user");
+    sessionStorage.removeItem("token");
+    location.href = "/";
+  }
 </script>
 
 <style>
